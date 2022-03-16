@@ -33,10 +33,10 @@
   margin-top: 16px;
 
   div {
+    @apply sm:m-4 m-1;
     background-color: #E6CDC9;
     border-radius: 8px;
     padding: 8px;
-    margin: 16px;
     width: 80px;
   }
 
@@ -203,7 +203,6 @@
 .decor-container {
   width: 100%;
   display: flex;
-  justify-content: end;
 }
 
 .decor {
