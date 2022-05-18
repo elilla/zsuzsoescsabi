@@ -5,13 +5,15 @@ import { Component, OnInit } from '@angular/core';
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss']
 })
-export class AppComponent implements OnInit{
+export class AppComponent implements OnInit {
   title = 'zsuzsoescsabi';
   days: number | undefined;
   hours: number | undefined;
   minutes: number | undefined;
   seconds: number | undefined;
   distance: number | undefined;
+
+  imageCounter: number = 0;
 
   ngOnInit() {
     const countDownDate = new Date("Jul 9, 2022 15:30:00").getTime();
@@ -31,6 +33,10 @@ export class AppComponent implements OnInit{
       this.hours = Math.floor((this.distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
       this.minutes = Math.floor((this.distance % (1000 * 60 * 60)) / (1000 * 60));
       this.seconds = Math.floor((this.distance % (1000 * 60)) / 1000);
+
+      if (this.seconds % 5 === 0) {
+        this.imageCounter === 3 ? this.imageCounter = 0 : this.imageCounter = this.imageCounter + 1;
+      }
     }, 1000);
   }
 }

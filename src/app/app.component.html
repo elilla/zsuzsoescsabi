@@ -64,15 +64,24 @@
         </div>
       </div>
     </div>
-    <div class="decor-container sm:justify-end">
+    <div class="decor-container relative sm:flex">
       <img src="assets/images/flower3.png" class="flower sm:w-1/4 w-1/2">
       <div
-        class=" decor flex flex-col sm:ml-0 mb-16 ml-16 sm:ml-0 mt-16 sm:mt-24 items-center text-center relative">
+        class="decor w-full flex flex-col sm:ml-0 mb-16 ml-16 sm:ml-0 items-center text-center relative">
         <img src="assets/images/gift-box.png" width="60">
-        <p class="mt-2">Ajándékon ne törd a fejed, egy borítékban elrejtheted.<br/>
+        <p>Ajándékon ne törd a fejed, egy borítékban elrejtheted.<br/>
           Hogy szerencsés legyen e nagy napunk, örülünk, <br/> ha ajándékba egy-egy sorsjegyet is kapunk.
       </div>
-      <img src="assets/images/profil.jpeg" width="400" class="profil"/>
+      <div class="relative flex items-end mb-16 sm:mb-0 mt-8 sm:ml-16">
+        <img src="assets/images/profil.jpeg" [ngStyle]="{'opacity':imageCounter === 0 ? 1 : 0}"
+             width="600" class="profil absolute"/>
+        <img src="assets/images/profil3.jpeg" [ngStyle]="{'opacity':imageCounter === 1 ? 1 : 0}" width="600"
+             class="profil"/>
+        <img src="assets/images/profil5.jpeg" [ngStyle]="{'opacity':imageCounter === 2 ? 1 : 0}" width="600"
+             class="profil absolute"/>
+        <img src="assets/images/profil6.jpeg" [ngStyle]="{'opacity':imageCounter === 3 ? 1 : 0}" width="600"
+             class="profil absolute"/>
+      </div>
     </div>
 
     <div class="sm:flex">
