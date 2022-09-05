@@ -102,10 +102,25 @@
 }
 
 .program {
-  @apply sm:w-1/2;
 
   h4 {
     font-size: 32px;
+  }
+
+  .time-slot {
+    width: 2px;
+    //background-color: #e5e5e5;
+    position: relative;
+    min-height: 30px;
+    margin: auto;
+
+    b {
+      @apply top-0 md:top-1 transform rotate-90 md:rotate-0;
+      position: absolute;
+      left: -7px;
+      color: #E6CDC9;
+      background-color: white;
+    }
   }
 }
 
@@ -155,25 +170,6 @@
   }
 }
 
-.timeline-box {
-  border-left: 1px solid #cccccc;
-  //margin-left: 128px;
-  @apply ml-8 sm:ml-16 mt-10;
-
-  ul {
-    text-align: left;
-
-    li:before {
-      content: '-----';
-      color: #cccccc;
-      padding-right: 16px;
-    }
-
-    li {
-      margin-bottom: 24px;
-    }
-  }
-}
 
 .animation {
   position: absolute;

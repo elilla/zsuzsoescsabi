@@ -16,7 +16,7 @@ export class AppComponent implements OnInit {
   imageCounter: number = 0;
 
   ngOnInit() {
-    const countDownDate = new Date("Jul 9, 2022 15:30:00").getTime();
+    const countDownDate = new Date("Jul 9, 2022 14:30:00").getTime();
 
     setInterval(() => {
       const now = new Date().getTime();
